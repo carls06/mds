@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace MDS
 {
-    public class Conexion
+    public class BdComun
     {
-        private static string conex;
-        private static MySqlConnection conectar;
+        private  string conex;
+        private  MySqlConnection conectar;
         private DataSet dst;
         private MySqlDataAdapter adaptador;
 
-        public void Conec()
+        public void Conexion()
         {
             try
             {
@@ -33,7 +33,14 @@ namespace MDS
             }
 
         }
+        public static MySqlConnection ObtenerConexion()
+        {
+            MySqlConnection conectar = new MySqlConnection("Server=205.134.252.210;Database=mdsxyz_mdsbd; Uid=mdsxyz_user; Pwd=carmando6; port=3306;");
 
-        
+            conectar.Open();
+            return conectar;
+        }
+
+
     }
 }

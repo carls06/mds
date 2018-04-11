@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace MDS
 {
@@ -32,8 +33,8 @@ namespace MDS
             Usuario pCliente = new Usuario();
             pCliente.usuario = textBox1.Text.Trim();
             pCliente.pass = textBox2.Text.Trim();
-          
             
+
             int resultado = UserDal.Agregar(pCliente);
             if (resultado > 0)
             {
