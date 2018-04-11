@@ -1,0 +1,14 @@
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\bin\Debug\MDS.exe.config
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\bin\Debug\MDS.exe
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\bin\Debug\MDS.pdb
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\bin\Debug\MySql.Data.dll
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csprojResolveAssemblyReference.cache
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.afiliado_form.resources
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Form1.resources
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.menu_doc.resources
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Properties.Resources.resources
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csproj.GenerateResource.cache
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csproj.CoreCompileInputs.cache
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csproj.CopyComplete
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.exe
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.pdb

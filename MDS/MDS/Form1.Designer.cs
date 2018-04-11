@@ -33,10 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,14 +85,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "inicio";
             // 
-            // button1
+            // textBox2
             // 
-            this.button1.Location = new System.Drawing.Point(54, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "salir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox2.Location = new System.Drawing.Point(150, 103);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 26);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(150, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 26);
+            this.textBox1.TabIndex = 5;
             // 
             // button2
             // 
@@ -102,20 +107,16 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "entrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // textBox1
+            // button1
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 26);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(150, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 26);
-            this.textBox2.TabIndex = 6;
+            this.button1.Location = new System.Drawing.Point(54, 149);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "salir";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
