@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recetasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,22 +43,16 @@
             this.referenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnVerificar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,6 +74,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(745, 108);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Apellido";
+            this.Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cita";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Examenes";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Diagnostico";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Referencia";
+            this.Column7.Name = "Column7";
             // 
             // menuStrip1
             // 
@@ -102,25 +132,25 @@
             // recetasToolStripMenuItem
             // 
             this.recetasToolStripMenuItem.Name = "recetasToolStripMenuItem";
-            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.recetasToolStripMenuItem.Text = "Recetas";
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             // 
             // examenesToolStripMenuItem
             // 
             this.examenesToolStripMenuItem.Name = "examenesToolStripMenuItem";
-            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.examenesToolStripMenuItem.Text = "Examenes";
             // 
             // referenciasToolStripMenuItem
             // 
             this.referenciasToolStripMenuItem.Name = "referenciasToolStripMenuItem";
-            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.referenciasToolStripMenuItem.Text = "Referencias";
             // 
             // nuevoPacienteToolStripMenuItem
@@ -143,6 +173,32 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Paciente";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(161, 24);
+            this.textBox1.TabIndex = 3;
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.Location = new System.Drawing.Point(247, 29);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(75, 30);
+            this.btnVerificar.TabIndex = 2;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(28, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 18);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "DUI";
             // 
             // dataGridView2
             // 
@@ -191,36 +247,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "label1";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nombre";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Apellido";
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cita";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Examenes";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Diagnostico";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Referencia";
-            this.Column7.Name = "Column7";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView2);
@@ -232,36 +258,11 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pre Inscripciones";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "DUI";
-            // 
-            // btnVerificar
-            // 
-            this.btnVerificar.Location = new System.Drawing.Point(247, 29);
-            this.btnVerificar.Name = "btnVerificar";
-            this.btnVerificar.Size = new System.Drawing.Size(75, 30);
-            this.btnVerificar.TabIndex = 2;
-            this.btnVerificar.Text = "Verificar";
-            this.btnVerificar.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(80, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 24);
-            this.textBox1.TabIndex = 3;
-            // 
             // menu_doc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 584);
+            this.ClientSize = new System.Drawing.Size(798, 521);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
