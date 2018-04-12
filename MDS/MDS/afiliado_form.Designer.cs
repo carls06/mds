@@ -136,7 +136,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(335, 205);
+            this.label10.Location = new System.Drawing.Point(335, 182);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 18);
             this.label10.TabIndex = 9;
@@ -295,7 +295,7 @@
             this.cmbEstadoLaboral.Items.AddRange(new object[] {
             "Empleado",
             "Desempleado"});
-            this.cmbEstadoLaboral.Location = new System.Drawing.Point(449, 202);
+            this.cmbEstadoLaboral.Location = new System.Drawing.Point(449, 179);
             this.cmbEstadoLaboral.Name = "cmbEstadoLaboral";
             this.cmbEstadoLaboral.Size = new System.Drawing.Size(147, 26);
             this.cmbEstadoLaboral.TabIndex = 28;
