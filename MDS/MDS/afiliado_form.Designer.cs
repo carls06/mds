@@ -38,11 +38,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbEstadoLaboral = new System.Windows.Forms.ComboBox();
             this.txtAlergico = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtDui = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.cmbSangre = new System.Windows.Forms.ComboBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -52,9 +51,10 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.cmbEstadoLaboral = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.duitxt = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,12 +144,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.duitxt);
             this.groupBox1.Controls.Add(this.cmbSexo);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cmbEstadoLaboral);
             this.groupBox1.Controls.Add(this.txtAlergico);
-            this.groupBox1.Controls.Add(this.txtTelefono);
-            this.groupBox1.Controls.Add(this.txtDui);
             this.groupBox1.Controls.Add(this.txtEdad);
             this.groupBox1.Controls.Add(this.cmbSangre);
             this.groupBox1.Controls.Add(this.txtDireccion);
@@ -176,25 +176,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
-            // button2
+            // cmbSexo
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 32);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Atras";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbSexo.Location = new System.Drawing.Point(124, 111);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(121, 26);
+            this.cmbSexo.TabIndex = 30;
             // 
-            // button1
+            // label8
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(543, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 29);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(72, 112);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 18);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Sexo";
+            // 
+            // cmbEstadoLaboral
+            // 
+            this.cmbEstadoLaboral.FormattingEnabled = true;
+            this.cmbEstadoLaboral.Items.AddRange(new object[] {
+            "Empleado",
+            "Desempleado"});
+            this.cmbEstadoLaboral.Location = new System.Drawing.Point(449, 179);
+            this.cmbEstadoLaboral.Name = "cmbEstadoLaboral";
+            this.cmbEstadoLaboral.Size = new System.Drawing.Size(147, 26);
+            this.cmbEstadoLaboral.TabIndex = 28;
             // 
             // txtAlergico
             // 
@@ -203,20 +214,6 @@
             this.txtAlergico.Name = "txtAlergico";
             this.txtAlergico.Size = new System.Drawing.Size(147, 102);
             this.txtAlergico.TabIndex = 25;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(124, 205);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(148, 24);
-            this.txtTelefono.TabIndex = 23;
-            // 
-            // txtDui
-            // 
-            this.txtDui.Location = new System.Drawing.Point(124, 175);
-            this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(148, 24);
-            this.txtDui.TabIndex = 22;
             // 
             // txtEdad
             // 
@@ -228,6 +225,14 @@
             // cmbSangre
             // 
             this.cmbSangre.FormattingEnabled = true;
+            this.cmbSangre.Items.AddRange(new object[] {
+            "O-",
+            "O+",
+            "A-",
+            "A+",
+            "B+",
+            "AB+",
+            "AB-"});
             this.cmbSangre.Location = new System.Drawing.Point(449, 24);
             this.cmbSangre.Name = "cmbSangre";
             this.cmbSangre.Size = new System.Drawing.Size(121, 26);
@@ -251,6 +256,11 @@
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.Items.AddRange(new object[] {
+            "Soltero",
+            "Casado",
+            "Divorciado",
+            "Viudo/a"});
             this.cmbEstadoCivil.Location = new System.Drawing.Point(124, 143);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(148, 26);
@@ -289,33 +299,42 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Tipo de Sangre";
             // 
-            // cmbEstadoLaboral
+            // button2
             // 
-            this.cmbEstadoLaboral.FormattingEnabled = true;
-            this.cmbEstadoLaboral.Items.AddRange(new object[] {
-            "Empleado",
-            "Desempleado"});
-            this.cmbEstadoLaboral.Location = new System.Drawing.Point(449, 179);
-            this.cmbEstadoLaboral.Name = "cmbEstadoLaboral";
-            this.cmbEstadoLaboral.Size = new System.Drawing.Size(147, 26);
-            this.cmbEstadoLaboral.TabIndex = 28;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 401);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 32);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Atras";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // button1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 112);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 18);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Sexo";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(543, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 29);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // cmbSexo
+            // duitxt
             // 
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Location = new System.Drawing.Point(124, 111);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(121, 26);
-            this.cmbSexo.TabIndex = 30;
+            this.duitxt.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duitxt.Location = new System.Drawing.Point(124, 172);
+            this.duitxt.Mask = "00000000-0";
+            this.duitxt.Name = "duitxt";
+            this.duitxt.Size = new System.Drawing.Size(148, 25);
+            this.duitxt.TabIndex = 31;
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(124, 204);
+            this.txtTelefono.Mask = "0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(148, 24);
+            this.txtTelefono.TabIndex = 32;
             // 
             // afiliado_form
             // 
@@ -355,12 +374,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtAlergico;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDui;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.ComboBox cmbSangre;
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbEstadoLaboral;
+        private System.Windows.Forms.MaskedTextBox txtTelefono;
+        private System.Windows.Forms.MaskedTextBox duitxt;
     }
 }

@@ -12,6 +12,7 @@ namespace MDS
 {
     public partial class menu_doc : Form
     {
+        string telefono;
         public menu_doc()
         {
             InitializeComponent();
@@ -24,12 +25,15 @@ namespace MDS
 
         private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            duitxt.Text = "";
+            dataGrid_paciente.Rows.Clear();
+            dataGrid_recetaPaciente.Rows.Clear();
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-
+            string telefono = String.Format("{0:########-#}", duitxt.Text);
+            
         }
     }
 }
