@@ -12,3 +12,6 @@ C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csproj.CoreCompileInput
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.csproj.CopyComplete
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.exe
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.pdb
+C:\Users\kev_m\Desktop\ADS\GitHub\mds\MDS\MDS\bin\Debug\MDS.exe.config
+C:\Users\kev_m\Desktop\ADS\GitHub\mds\MDS\MDS\obj\Debug\MDS.exe
+C:\Users\kev_m\Desktop\ADS\GitHub\mds\MDS\MDS\obj\Debug\MDS.pdb
