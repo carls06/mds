@@ -16,5 +16,12 @@ namespace MDS
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            menu_doc doc = new menu_doc();
+            doc.Show();
+            this.Hide();
+        }
     }
 }

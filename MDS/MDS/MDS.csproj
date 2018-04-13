@@ -98,6 +98,9 @@
     <EmbeddedResource Include="afiliado_form.resx">
       <DependentUpon>afiliado_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Citas_formulario.resx">
+      <DependentUpon>Citas_formulario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -132,26 +132,30 @@
             // recetasToolStripMenuItem
             // 
             this.recetasToolStripMenuItem.Name = "recetasToolStripMenuItem";
-            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.recetasToolStripMenuItem.Text = "Recetas";
+            this.recetasToolStripMenuItem.Click += new System.EventHandler(this.recetasToolStripMenuItem_Click);
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citasToolStripMenuItem.Text = "Citas";
+            this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click);
             // 
             // examenesToolStripMenuItem
             // 
             this.examenesToolStripMenuItem.Name = "examenesToolStripMenuItem";
-            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.examenesToolStripMenuItem.Text = "Examenes";
+            this.examenesToolStripMenuItem.Click += new System.EventHandler(this.examenesToolStripMenuItem_Click);
             // 
             // referenciasToolStripMenuItem
             // 
             this.referenciasToolStripMenuItem.Name = "referenciasToolStripMenuItem";
-            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.referenciasToolStripMenuItem.Text = "Referencias";
+            this.referenciasToolStripMenuItem.Click += new System.EventHandler(this.referenciasToolStripMenuItem_Click);
             // 
             // nuevoPacienteToolStripMenuItem
             // 
