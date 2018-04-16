@@ -15,7 +15,7 @@ namespace MDS
     {
 
 
-        public static int Agregar(Usuario pCliente)
+        public static int Agregar_prueba(Usuario pCliente)
         {
             int retorno = 0;
 
@@ -28,9 +28,31 @@ namespace MDS
             return retorno;
         }
 
+        //public void ListarProveedor(ComboBox cb)
+        //{
+        //    List<Usuario> Lista = new List<Usuario>();
+        //    using (MySqlConnection conexion = BdComun.ObtenerConexion())
+        //    {
+
+        //        MySqlCommand comando = new MySqlCommand(string.Format("Select  nombre from ingreso"), conexion);
+
+        //        MySqlDataReader reader = comando.ExecuteReader();
+
+        //        while (reader.Read())
+        //        {
+
+        //            Proveedor proveedor = new Proveedor();
+
+        //            cb.Items.Add(reader.GetString(0));
+        //        }
+        //        conexion.Close();
 
 
-       
+        //    }
+        //}
+
+
+
 
 
 

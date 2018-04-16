@@ -1,6 +1,6 @@
 ﻿namespace MDS
 {
-    partial class menu_doc
+    partial class Menu_doc
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.referenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.duitxt = new System.Windows.Forms.TextBox();
+            this.duitxt = new System.Windows.Forms.MaskedTextBox();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid_recetaPaciente = new System.Windows.Forms.DataGridView();
@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_paciente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -132,28 +133,28 @@
             // recetasToolStripMenuItem
             // 
             this.recetasToolStripMenuItem.Name = "recetasToolStripMenuItem";
-            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recetasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.recetasToolStripMenuItem.Text = "Recetas";
             this.recetasToolStripMenuItem.Click += new System.EventHandler(this.recetasToolStripMenuItem_Click);
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             this.citasToolStripMenuItem.Click += new System.EventHandler(this.citasToolStripMenuItem_Click);
             // 
             // examenesToolStripMenuItem
             // 
             this.examenesToolStripMenuItem.Name = "examenesToolStripMenuItem";
-            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.examenesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.examenesToolStripMenuItem.Text = "Examenes";
             this.examenesToolStripMenuItem.Click += new System.EventHandler(this.examenesToolStripMenuItem_Click);
             // 
             // referenciasToolStripMenuItem
             // 
             this.referenciasToolStripMenuItem.Name = "referenciasToolStripMenuItem";
-            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.referenciasToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.referenciasToolStripMenuItem.Text = "Referencias";
             this.referenciasToolStripMenuItem.Click += new System.EventHandler(this.referenciasToolStripMenuItem_Click);
             // 
@@ -180,10 +181,12 @@
             // 
             // duitxt
             // 
-            this.duitxt.Location = new System.Drawing.Point(80, 35);
+            this.duitxt.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duitxt.Location = new System.Drawing.Point(79, 31);
+            this.duitxt.Mask = "00000000-0";
             this.duitxt.Name = "duitxt";
-            this.duitxt.Size = new System.Drawing.Size(161, 24);
-            this.duitxt.TabIndex = 3;
+            this.duitxt.Size = new System.Drawing.Size(148, 25);
+            this.duitxt.TabIndex = 36;
             // 
             // btnVerificar
             // 
@@ -262,19 +265,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pre Inscripciones";
             // 
-            // menu_doc
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(392, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // Menu_doc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 521);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "menu_doc";
+            this.Name = "Menu_doc";
             this.Text = "menu_doc";
+            this.Load += new System.EventHandler(this.menu_doc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_paciente)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -309,10 +323,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.TextBox duitxt;
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MaskedTextBox duitxt;
     }
 }

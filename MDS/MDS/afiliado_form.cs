@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MDS
 {
-    public partial class afiliado_form : Form
+    public partial class Afiliado_form : Form
     {
-        public afiliado_form()
+        public Afiliado_form()
         {
             InitializeComponent();
         }

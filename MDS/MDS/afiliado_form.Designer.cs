@@ -1,6 +1,6 @@
 ﻿namespace MDS
 {
-    partial class afiliado_form
+    partial class Afiliado_form
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.duitxt = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbEstadoLaboral = new System.Windows.Forms.ComboBox();
@@ -53,8 +55,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.duitxt = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,6 +175,23 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(124, 204);
+            this.txtTelefono.Mask = "0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(148, 24);
+            this.txtTelefono.TabIndex = 32;
+            // 
+            // duitxt
+            // 
+            this.duitxt.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.duitxt.Location = new System.Drawing.Point(124, 172);
+            this.duitxt.Mask = "00000000-0";
+            this.duitxt.Name = "duitxt";
+            this.duitxt.Size = new System.Drawing.Size(148, 25);
+            this.duitxt.TabIndex = 31;
             // 
             // cmbSexo
             // 
@@ -319,24 +336,7 @@
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // duitxt
-            // 
-            this.duitxt.Font = new System.Drawing.Font("Segoe UI Emoji", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.duitxt.Location = new System.Drawing.Point(124, 172);
-            this.duitxt.Mask = "00000000-0";
-            this.duitxt.Name = "duitxt";
-            this.duitxt.Size = new System.Drawing.Size(148, 25);
-            this.duitxt.TabIndex = 31;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Location = new System.Drawing.Point(124, 204);
-            this.txtTelefono.Mask = "0000-0000";
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(148, 24);
-            this.txtTelefono.TabIndex = 32;
-            // 
-            // afiliado_form
+            // Afiliado_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -344,8 +344,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "afiliado_form";
-            this.Text = "RegistroUsuario";
+            this.Name = "Afiliado_form";
+            this.Text = "RegistroAfiliados";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -16,5 +16,18 @@ namespace MDS
         {
             InitializeComponent();
         }
+
+        private void Referencias_formulario_Load(object sender, EventArgs e)
+        {
+            HospitalDal hospi = new HospitalDal();
+            hospi.ListarHospitales(cblistHospi);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu_doc doc = new Menu_doc();
+            doc.Show();
+            this.Close();
+        }
     }
 }

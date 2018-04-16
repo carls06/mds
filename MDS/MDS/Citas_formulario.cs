@@ -19,9 +19,14 @@ namespace MDS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            menu_doc doc = new menu_doc();
+            Menu_doc doc = new Menu_doc();
             doc.Show();
             this.Hide();
+        }
+
+        private void Citas_formulario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

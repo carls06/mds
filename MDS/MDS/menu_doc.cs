@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace MDS
 {
-    public partial class menu_doc : Form
+    public partial class Menu_doc : Form
     {
-        string telefono;
-        public menu_doc()
+        
+        public Menu_doc()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace MDS
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            string telefono = String.Format("{0:########-#}", duitxt.Text);
+            
             
         }
 
@@ -62,6 +62,17 @@ namespace MDS
             Referencias_formulario referencias = new Referencias_formulario();
             referencias.Show();
             this.Hide();
+        }
+
+        private void menu_doc_Load(object sender, EventArgs e)
+        {
+            //UserDal user = new UserDal();
+            //user.ListarProveedor(comboBox1);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

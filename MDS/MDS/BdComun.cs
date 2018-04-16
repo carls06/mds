@@ -11,18 +11,19 @@ namespace MDS
 {
     public class BdComun
     {
-        private  string conex;
-        private  MySqlConnection conectar;
-        private DataSet dst;
-        private MySqlDataAdapter adaptador;
+        //private string conex;
+        //private MySqlConnection conectar;
+        //private DataSet dst;
+        //private MySqlDataAdapter adaptador;
 
-        
+
         public static MySqlConnection ObtenerConexion()
         {
-            MySqlConnection conectar = new MySqlConnection("Server=205.134.252.210;Database=mdsxyz_mdsbd; Uid=mdsxyz_user; Pwd=carmando6; port=3306;");
+             MySqlConnection conectar = new MySqlConnection("Server=205.134.252.210;Database=mdsxyz_mdsbd; Uid=mdsxyz_user; Pwd=carmando6; port=3306;");
 
-            conectar.Open();
-            return conectar;
+                conectar.Open();
+                return conectar;
+           
         }
 
 

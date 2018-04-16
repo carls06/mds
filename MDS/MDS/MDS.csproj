@@ -48,11 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="afiliado_form.cs">
+    <Compile Include="Administrativo_Formulario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="afiliado_form.Designer.cs">
-      <DependentUpon>afiliado_form.cs</DependentUpon>
+    <Compile Include="Administrativo_Formulario.Designer.cs">
+      <DependentUpon>Administrativo_Formulario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Afiliador.cs" />
+    <Compile Include="Afiliado_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Afiliado_form.Designer.cs">
+      <DependentUpon>Afiliado_form.cs</DependentUpon>
     </Compile>
     <Compile Include="BdComun.cs" />
     <Compile Include="Citas_formulario.cs">
@@ -61,23 +68,32 @@
     <Compile Include="Citas_formulario.Designer.cs">
       <DependentUpon>Citas_formulario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor.cs" />
     <Compile Include="Examenes_formulario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Examenes_formulario.Designer.cs">
       <DependentUpon>Examenes_formulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Hospital.cs" />
+    <Compile Include="HospitalDal.cs" />
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="menu_doc.cs">
+    <Compile Include="Menu_administrativo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menu_doc.Designer.cs">
-      <DependentUpon>menu_doc.cs</DependentUpon>
+    <Compile Include="Menu_administrativo.Designer.cs">
+      <DependentUpon>Menu_administrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_doc.Designer.cs">
+      <DependentUpon>Menu_doc.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,17 +111,26 @@
     </Compile>
     <Compile Include="UserDal.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="afiliado_form.resx">
-      <DependentUpon>afiliado_form.cs</DependentUpon>
+    <EmbeddedResource Include="Administrativo_Formulario.resx">
+      <DependentUpon>Administrativo_Formulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Afiliado_form.resx">
+      <DependentUpon>Afiliado_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Citas_formulario.resx">
       <DependentUpon>Citas_formulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Examenes_formulario.resx">
+      <DependentUpon>Examenes_formulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menu_doc.resx">
-      <DependentUpon>menu_doc.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_administrativo.resx">
+      <DependentUpon>Menu_administrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_doc.resx">
+      <DependentUpon>Menu_doc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +141,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recetas_formulario.resx">
+      <DependentUpon>Recetas_formulario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referencias_formulario.resx">
+      <DependentUpon>Referencias_formulario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
