@@ -55,6 +55,13 @@
       <DependentUpon>Administrativo_Formulario.cs</DependentUpon>
     </Compile>
     <Compile Include="Afiliador.cs" />
+    <Compile Include="AfiliadorDal.cs" />
+    <Compile Include="Ver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ver.Designer.cs">
+      <DependentUpon>Ver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Afiliado_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +121,9 @@
     <EmbeddedResource Include="Administrativo_Formulario.resx">
       <DependentUpon>Administrativo_Formulario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ver.resx">
+      <DependentUpon>Ver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Afiliado_form.resx">
       <DependentUpon>Afiliado_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

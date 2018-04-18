@@ -21,3 +21,4 @@ C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Examenes_formulario.res
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Login.resources
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Menu_administrativo.resources
 C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Recetas_formulario.resources
+C:\Users\pc-1\Documents\Kraken\mds\MDS\MDS\obj\Debug\MDS.Ver.resources

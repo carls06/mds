@@ -13,7 +13,7 @@ namespace MDS
 {
     public partial class Login : Form
     {
-        string usu,pas ,id;
+        string usu,id;
       
         public Login()
         {
@@ -32,20 +32,7 @@ namespace MDS
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //Usuario pCliente = new Usuario();
-            //pCliente.usuario = usuariotxt.Text.Trim();
-            //pCliente.pass = passtxt.Text.Trim();
-
-
-            //int resultado = UserDal.Agregar_prueba(pCliente);
-            //if (resultado > 0)
-            //{
-            //    MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //}
+            
 
 
             inicio();
