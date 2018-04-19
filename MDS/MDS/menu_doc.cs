@@ -32,8 +32,8 @@ namespace MDS
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
-            
-            
+            //SELECT afiliados.nombre, afiliados.apellido, afiliados.dui, cita.Prox_cita, examenes.nombre_de_exam FROM afiliados INNER JOIN cita ON afiliados.id_afiliado=cita.id_afiliado INNER JOIN examenes ON  afiliados.id_afiliado = examenes.id_afiliado WHERE afiliados.dui like '" +duitxt.text+'");
+
         }
 
         private void citasToolStripMenuItem_Click(object sender, EventArgs e)
