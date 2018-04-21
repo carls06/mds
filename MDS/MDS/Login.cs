@@ -13,7 +13,7 @@ namespace MDS
 {
     public partial class Login : Form
     {
-        string usu,id;
+        public string usu,id,doc;
       
         public Login()
         {
@@ -42,7 +42,7 @@ namespace MDS
         {
 
         }
-
+        
 
 
         public void inicio()
@@ -58,7 +58,7 @@ namespace MDS
                     {
                         if (pass != null)
                         {
-                            MySqlCommand comando = new MySqlCommand("SELECT usuario, contraseña, id_doctor,id_afiliador FROM `usuario` WHERE usuario= '" + idsesion + "'and contraseña = '" + pass + "' ", cn);
+                            MySqlCommand comando = new MySqlCommand("SELECT usuario.usuario, usuario.contraseña, usuario.id_doctor,usuario.id_afiliador, doctores.nombre FROM `usuario` INNER JOIN doctores on doctores.id_doctor=usuario.id_doctor WHERE usuario.usuario = '" + idsesion + "'and usuario.contraseña = '" + pass + "' ", cn);
                             //cn.Open();
                             comando.ExecuteNonQuery();
                             MySqlDataAdapter adapt = new MySqlDataAdapter(comando);
@@ -66,8 +66,10 @@ namespace MDS
                             adapt.Fill(prueba);
 
                            
-                               id = (prueba.Rows[0][2].ToString());
+                            id =  prueba.Rows[0][2].ToString();
                             usu = prueba.Rows[0][3].ToString();
+                            doc = prueba.Rows[0][4].ToString();
+
                             
 
 
@@ -82,8 +84,11 @@ namespace MDS
                                 }
                                 else if (usu == "" && id != "") 
                                 {
+                                    MessageBox.Show(""+doc);
                                     Menu_doc lol = new Menu_doc();
-                                    lol.Show();
+                                    lol.label1.Text = doc;
+                                    lol.Show();  
+                                    
                                     this.Hide();
                                 }
                             }

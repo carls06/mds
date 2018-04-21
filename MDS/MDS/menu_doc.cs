@@ -12,11 +12,11 @@ namespace MDS
 {
     public partial class Menu_doc : Form
     {
-        
         public Menu_doc()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -68,9 +68,15 @@ namespace MDS
         {
             //UserDal user = new UserDal();
             //user.ListarProveedor(comboBox1);
+            //label1.Text = nom;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
