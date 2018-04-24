@@ -212,6 +212,7 @@
             this.button2.TabIndex = 36;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -236,6 +237,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "Recetas_formulario";
             this.Text = "Recetas_formulario";
+            this.Load += new System.EventHandler(this.Recetas_formulario_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -260,8 +262,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Label label10;
     }
 }

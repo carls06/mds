@@ -16,8 +16,8 @@ namespace MDS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Login());
-            //Application.Run(new Menu_doc());
+            Application.Run(new Login());
+           // Application.Run(new Administrativo_Formulario());
         }
     }
 }

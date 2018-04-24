@@ -16,7 +16,7 @@ namespace MDS
         {
             InitializeComponent();
         }
-
+        
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -119,6 +119,33 @@ namespace MDS
                 dateTimePicker13.Enabled = true;
             else
                 dateTimePicker13.Enabled = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu_doc doc = new Menu_doc();
+            
+            this.Close();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Examenes_formulario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

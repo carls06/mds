@@ -52,14 +52,14 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbledad = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblape = new System.Windows.Forms.Label();
+            this.lblnom = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.duitxt = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
@@ -184,7 +184,7 @@
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.btnCheck);
-            this.tabPage1.Controls.Add(this.maskedTextBox1);
+            this.tabPage1.Controls.Add(this.duitxt);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
@@ -273,6 +273,7 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Paso 1: Tipo de Consulta";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // radioButton1
             // 
@@ -298,10 +299,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbledad);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblape);
+            this.groupBox1.Controls.Add(this.lblnom);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 76);
@@ -311,14 +312,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información general";
             // 
-            // label7
+            // lbledad
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 61);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 16);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "label7";
+            this.lbledad.AutoSize = true;
+            this.lbledad.Location = new System.Drawing.Point(72, 61);
+            this.lbledad.Name = "lbledad";
+            this.lbledad.Size = new System.Drawing.Size(45, 16);
+            this.lbledad.TabIndex = 5;
+            this.lbledad.Text = "label7";
             // 
             // label6
             // 
@@ -329,23 +330,23 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Edad:";
             // 
-            // label5
+            // lblape
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(284, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.lblape.AutoSize = true;
+            this.lblape.Location = new System.Drawing.Point(284, 28);
+            this.lblape.Name = "lblape";
+            this.lblape.Size = new System.Drawing.Size(45, 16);
+            this.lblape.TabIndex = 3;
+            this.lblape.Text = "label5";
             // 
-            // label4
+            // lblnom
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.lblnom.AutoSize = true;
+            this.lblnom.Location = new System.Drawing.Point(72, 28);
+            this.lblnom.Name = "lblnom";
+            this.lblnom.Size = new System.Drawing.Size(45, 16);
+            this.lblnom.TabIndex = 2;
+            this.lblnom.Text = "label4";
             // 
             // label3
             // 
@@ -373,14 +374,15 @@
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "Verificar";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // maskedTextBox1
+            // duitxt
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(259, 25);
-            this.maskedTextBox1.Mask = "00000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(85, 22);
-            this.maskedTextBox1.TabIndex = 1;
+            this.duitxt.Location = new System.Drawing.Point(259, 25);
+            this.duitxt.Mask = "00000000-0";
+            this.duitxt.Name = "duitxt";
+            this.duitxt.Size = new System.Drawing.Size(85, 22);
+            this.duitxt.TabIndex = 1;
             // 
             // label1
             // 
@@ -452,11 +454,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbledad;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblape;
+        private System.Windows.Forms.Label lblnom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -469,5 +470,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        public System.Windows.Forms.MaskedTextBox duitxt;
     }
 }

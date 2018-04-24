@@ -10,28 +10,31 @@ using System.Windows.Forms;
 
 namespace MDS
 {
-    public partial class Administrativo_Formulario : Form
+    public partial class Doctor_formulario : Form
     {
-        public Administrativo_Formulario()
+        public Doctor_formulario()
         {
             InitializeComponent();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Afiliador afili = new Afiliador();
-            afili.nombre = txtNombre.Text.Trim();
-            afili.apellido = txtApellido.Text.Trim();
-            afili.edad = Convert.ToInt32(txtEdad.Text.Trim());
-            afili.dui = duitxt.Text.Trim();
-            afili.direccion = txtDireccion.Text.Trim();
-            afili.contraseña = txtpass.Text.Trim();
+            Doctor doc = new Doctor();
+            doc.nombre = txtNombre.Text.Trim();
+            doc.apellido = txtApellido.Text.Trim();
+            doc.edad = Convert.ToInt32(txtEdad.Text.Trim());
+            doc.especialidad = cbespecialidad.Text.Trim();
+            doc.direccion = txtDireccion.Text.Trim();
+            doc.dui = duitxt.Text.Trim();
+            doc.contraseña = txtpass.Text.Trim();
+            
 
 
-            int resultado = AfiliadorDal.Agregar_Afiliador(afili);
+            int resultado = DoctorDal.Agregar_Doc(doc);
+
             if (resultado > 0)
             {
-                MessageBox.Show("Usuario Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Doctor Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

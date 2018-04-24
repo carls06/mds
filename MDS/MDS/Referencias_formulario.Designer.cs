@@ -154,6 +154,7 @@
             this.cblistHospi.Name = "cblistHospi";
             this.cblistHospi.Size = new System.Drawing.Size(280, 29);
             this.cblistHospi.TabIndex = 25;
+            this.cblistHospi.SelectedIndexChanged += new System.EventHandler(this.cblistHospi_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -246,8 +247,8 @@
         private System.Windows.Forms.ComboBox cblistHospi;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label label10;
     }
 }

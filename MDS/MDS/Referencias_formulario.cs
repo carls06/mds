@@ -26,8 +26,13 @@ namespace MDS
         private void button2_Click(object sender, EventArgs e)
         {
             Menu_doc doc = new Menu_doc();
-            doc.Show();
+            
             this.Close();
+        }
+
+        private void cblistHospi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 39);
+            this.label1.Location = new System.Drawing.Point(34, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 106);
+            this.label2.Location = new System.Drawing.Point(34, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 2;
@@ -78,9 +78,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Poor Richard", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(14, 194);
+            this.groupBox1.Location = new System.Drawing.Point(12, 193);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 185);
+            this.groupBox1.Size = new System.Drawing.Size(352, 217);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "inicio";
@@ -88,21 +88,21 @@
             // 
             // passtxt
             // 
-            this.passtxt.Location = new System.Drawing.Point(150, 103);
+            this.passtxt.Location = new System.Drawing.Point(143, 126);
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(171, 26);
             this.passtxt.TabIndex = 6;
             // 
             // usuariotxt
             // 
-            this.usuariotxt.Location = new System.Drawing.Point(150, 36);
+            this.usuariotxt.Location = new System.Drawing.Point(143, 59);
             this.usuariotxt.Name = "usuariotxt";
             this.usuariotxt.Size = new System.Drawing.Size(171, 26);
             this.usuariotxt.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(182, 149);
+            this.button2.Location = new System.Drawing.Point(175, 172);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 30);
             this.button2.TabIndex = 4;
@@ -112,7 +112,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(54, 149);
+            this.button1.Location = new System.Drawing.Point(47, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 30);
             this.button1.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 391);
+            this.ClientSize = new System.Drawing.Size(380, 440);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";

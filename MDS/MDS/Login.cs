@@ -40,7 +40,7 @@ namespace MDS
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            usuariotxt.Focus();
         }
         
 
@@ -58,7 +58,8 @@ namespace MDS
                     {
                         if (pass != null)
                         {
-                            MySqlCommand comando = new MySqlCommand("SELECT usuario.usuario, usuario.contraseña, usuario.id_doctor,usuario.id_afiliador, doctores.nombre FROM `usuario` INNER JOIN doctores on doctores.id_doctor=usuario.id_doctor WHERE usuario.usuario = '" + idsesion + "'and usuario.contraseña = '" + pass + "' ", cn);
+
+                            MySqlCommand comando = new MySqlCommand("SELECT usuario, contraseña, id_doctor, id_afiliador FROM `usuario`  WHERE usuario.usuario = '" + idsesion + "'and usuario.contraseña = '" + pass + "' ", cn);
                             //cn.Open();
                             comando.ExecuteNonQuery();
                             MySqlDataAdapter adapt = new MySqlDataAdapter(comando);
@@ -68,7 +69,7 @@ namespace MDS
                            
                             id =  prueba.Rows[0][2].ToString();
                             usu = prueba.Rows[0][3].ToString();
-                            doc = prueba.Rows[0][4].ToString();
+                            
 
                             
 
@@ -76,18 +77,21 @@ namespace MDS
                             if ((idsesion == prueba.Rows[0][0].ToString()) || (pass == prueba.Rows[0][1].ToString()))
                             {
                                 
+                                
                                 if (id == "" && usu != "")
                                 {
                                     Menu_administrativo adm = new Menu_administrativo();
+                                    
                                     adm.Show();
                                     this.Hide();
+
                                 }
                                 else if (usu == "" && id != "") 
                                 {
-                                    MessageBox.Show(""+doc);
+                                   
                                     Menu_doc lol = new Menu_doc();
-                                    lol.label1.Text = doc;
-                                    lol.Show();  
+                                    lol.nomdoc(idsesion);
+                                    lol.Show();
                                     
                                     this.Hide();
                                 }

@@ -38,6 +38,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.duitxt = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
@@ -54,7 +55,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,6 +176,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(168, 273);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 24);
+            this.dateTimePicker1.TabIndex = 33;
             // 
             // txtTelefono
             // 
@@ -319,6 +327,7 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -329,14 +338,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(168, 273);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 24);
-            this.dateTimePicker1.TabIndex = 33;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Afiliado_form
             // 

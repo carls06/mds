@@ -46,5 +46,17 @@ namespace MDS
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu_administrativo adm = new Menu_administrativo();
+            adm.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
