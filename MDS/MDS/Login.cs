@@ -32,10 +32,6 @@ namespace MDS
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
-
-
-            //inicio();
             inicio2();
         }
 
@@ -91,11 +87,11 @@ namespace MDS
                                 else if (usu == "" && id != "")
                                 {
 
-                                    Menu_doc lol = new Menu_doc();
-                                    lol.nomdoc(idsesion);
-                                    lol.Show();
+                                    //Menu_doc lol = new Menu_doc();
+                                    //lol.nomdoc(idsesion);
+                                    //lol.Show();
 
-                                    this.Hide();
+                                    //this.Hide();
                                 }
                             }
 

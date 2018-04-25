@@ -13,31 +13,52 @@ namespace MDS
 {
     public partial class Menu_doc : Form
     {
+        string name, apellido, especialidad, id_doctor;
+        string name2, apellido2;
+        Queue<string> Id_Afi = new Queue<string>();
         public Menu_doc()
         {
             InitializeComponent();
-              
-        }
-        
-        
 
+        }
+        //este metodo ya es funcinal para este formulario para los datos del doctor
         public void nomdoc(string dui)
-        {
-            string name;
+        {            
             using (MySqlConnection cn = BdComun.ObtenerConexion())
             {
-                MySqlCommand cmd = new MySqlCommand("Select `nombre` FROM `doctores` where dui = " +dui , cn);
+                MySqlCommand cmd = new MySqlCommand("select nombre, apellido, especialidad, id_doctor from doctores where dui = '"+dui+"'", cn);
                 cmd.ExecuteNonQuery();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable ds = new DataTable();
                 da.Fill(ds);
                 name = ds.Rows[0][0].ToString();
+                apellido = ds.Rows[0][1].ToString();
+                especialidad = ds.Rows[0][2].ToString();
+                id_doctor = ds.Rows[0][3].ToString();
                 cn.Close();
             }
 
-            label1.Text = name;
-            
+            label1.Text = name + " " + apellido + "           Especialidad: " + especialidad;            
         }
+
+        //Este metodo esta en un 75% de estar funcional (solo falta una condicion para evitar redundancia), pero para hacer pruebas esta bueno
+        public void Llenar_Cola()
+        {
+            using (MySqlConnection cn = BdComun.ObtenerConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand("select id_afiliado from cita where id_doctor = '" + id_doctor + "'", cn);
+                cmd.ExecuteNonQuery();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable ds = new DataTable();
+                da.Fill(ds);
+                for(int i = 0; i < ds.Rows.Count; i++)
+                {
+                    Id_Afi.Enqueue(ds.Rows[i][0].ToString());
+                }
+                cn.Close();
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +69,29 @@ namespace MDS
             duitxt.Text = "";
             dataGrid_paciente.Rows.Clear();
             dataGrid_recetaPaciente.Rows.Clear();
+            Id_Afi.Clear();
+            Llenar_Cola();
+            if (Id_Afi.Count == 0)
+            {
+                
+            }
+            else
+            {                
+                //Llena la cola de los pacientes que el doctor tiene que atender
+                using (MySqlConnection cn = BdComun.ObtenerConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand("select nombre, apellido from afiliados where id_afiliado = '" + Id_Afi.Peek() + "'", cn);
+                    cmd.ExecuteNonQuery();
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable ds = new DataTable();
+                    da.Fill(ds);
+                    name2 = ds.Rows[0][0].ToString();
+                    apellido2 = ds.Rows[0][1].ToString();
+                    cn.Close();
+                }
+                lblNombre.Text = name2;
+                lblApellido.Text = apellido2;
+            }
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)

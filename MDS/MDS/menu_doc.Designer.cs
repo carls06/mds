@@ -58,9 +58,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnTerminar = new System.Windows.Forms.Button();
@@ -130,7 +130,7 @@
             this.nuevoPacienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(770, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(849, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -307,9 +307,9 @@
             // 
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.lblApellido);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.lblNombre);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(15, 74);
@@ -337,14 +337,14 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Edad:";
             // 
-            // label7
+            // lblApellido
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(385, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 16);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "label7";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(385, 31);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(45, 16);
+            this.lblApellido.TabIndex = 3;
+            this.lblApellido.Text = "label7";
             // 
             // label6
             // 
@@ -355,14 +355,14 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Apellido:";
             // 
-            // label5
+            // lblNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "label5";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(76, 31);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(45, 16);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "label5";
             // 
             // label4
             // 
@@ -399,9 +399,9 @@
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(770, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(849, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(126, 589);
+            this.menuStrip2.Size = new System.Drawing.Size(47, 589);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
@@ -409,7 +409,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(34, 19);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -478,9 +478,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnTerminar;
