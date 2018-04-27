@@ -56,6 +56,8 @@
     </Compile>
     <Compile Include="Afiliador.cs" />
     <Compile Include="AfiliadorDal.cs" />
+    <Compile Include="Citas.cs" />
+    <Compile Include="CitasDal.cs" />
     <Compile Include="DoctorDal.cs" />
     <Compile Include="Doctor_formulario.cs">
       <SubType>Form</SubType>

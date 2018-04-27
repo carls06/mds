@@ -18,6 +18,8 @@ namespace MDS
             InitializeComponent();
             groupBox2.Enabled = false;
             radioButton1.Checked = true;
+         
+
         }
         int refe = 0;
 
@@ -45,18 +47,10 @@ namespace MDS
             this.Hide();
         }
 
-             DoctorDal lis = new DoctorDal();
+            
         private void Menu_administrativo_Load(object sender, EventArgs e)
         {
-            if(radioButton1.Checked== true)
-            {
-                
-                lis.ListarDocGeneral(comboBox1);
-            }else if (radioButton2.Checked == true)
-            {
-                
-                lis.ListarDocespecialidad(comboBox1);
-            }
+           
         }
 
         private void afiliadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,6 +101,35 @@ namespace MDS
 
         }
         string nom, ape, eda;
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            DoctorDal lis = new DoctorDal();
+
+            lis.ListarDocGeneral(comboBox1);
+            comboBox2.Items.Clear();
+            comboBox1.Visible = true;
+            comboBox2.Visible = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            DoctorDal lis2 = new DoctorDal();
+            lis2.ListarDocespecialidad(comboBox2);
+            comboBox1.Items.Clear();
+            comboBox2.Visible = true;
+            comboBox1.Visible = false;
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+ 
+        }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {

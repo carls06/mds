@@ -92,6 +92,7 @@
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(171, 26);
             this.passtxt.TabIndex = 6;
+            this.passtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passtxt_KeyPress);
             // 
             // usuariotxt
             // 

@@ -37,20 +37,20 @@ namespace MDS
 
         public void ListarDocGeneral(ComboBox cb)
         {
-            List<Doctor> Lista = new List<Doctor>();
+            
             using (MySqlConnection conexion = BdComun.ObtenerConexion())
             {
 
-                MySqlCommand comando = new MySqlCommand(string.Format("Select  nombre  from doctores where especialidad like 'General'"), conexion);
+                MySqlCommand comando = new MySqlCommand(string.Format("Select  nombre, apellido  from doctores where especialidad like 'General'"), conexion);
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-                    // Proveedor proveedor = new Proveedor();
+                    
 
-                    cb.Items.Add(reader.GetString(0));
+                    cb.Items.Add(reader.GetString(0) +" "+ reader.GetString(1));
                 }
                 conexion.Close();
 
@@ -60,22 +60,24 @@ namespace MDS
 
         public void ListarDocespecialidad(ComboBox cb)
         {
-            List<Doctor> Lista = new List<Doctor>();
+      
             using (MySqlConnection conexion = BdComun.ObtenerConexion())
             {
 
-                MySqlCommand comando = new MySqlCommand(string.Format("Select  nombre  from doctores where especialidad like '%gia'"), conexion);
+                MySqlCommand comando2 = new MySqlCommand(string.Format("select nombre, apellido from doctores where especialidad like '%gia'"), conexion);
 
-                MySqlDataReader reader = comando.ExecuteReader();
+                MySqlDataReader reader = comando2.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-                    // Proveedor proveedor = new Proveedor();
+                    
 
-                    cb.Items.Add(reader.GetString(0));
+                    cb.Items.Add(reader.GetString(0)+ " "+ reader.GetString(1));
                 }
+                
                 conexion.Close();
+                
 
 
             }

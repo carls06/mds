@@ -15,6 +15,7 @@ namespace MDS
     {
         string name, apellido, especialidad, id_doctor;
         string name2, apellido2;
+        string dui;
         Queue<string> Id_Afi = new Queue<string>();
         public Menu_doc()
         {
@@ -67,6 +68,7 @@ namespace MDS
         private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             duitxt.Text = "";
+            
             dataGrid_paciente.Rows.Clear();
             dataGrid_recetaPaciente.Rows.Clear();
             Id_Afi.Clear();
@@ -80,17 +82,45 @@ namespace MDS
                 //Llena la cola de los pacientes que el doctor tiene que atender
                 using (MySqlConnection cn = BdComun.ObtenerConexion())
                 {
-                    MySqlCommand cmd = new MySqlCommand("select nombre, apellido from afiliados where id_afiliado = '" + Id_Afi.Peek() + "'", cn);
+                    MySqlCommand cmd = new MySqlCommand("select nombre, apellido, dui from afiliados where id_afiliado = '" + Id_Afi.Peek() + "'", cn);
                     cmd.ExecuteNonQuery();
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable ds = new DataTable();
                     da.Fill(ds);
                     name2 = ds.Rows[0][0].ToString();
                     apellido2 = ds.Rows[0][1].ToString();
+                    dui = ds.Rows[0][2].ToString();
                     cn.Close();
                 }
                 lblNombre.Text = name2;
                 lblApellido.Text = apellido2;
+
+
+                // llena el grid de las citas medicas siguientes
+                using (MySqlConnection cn = BdComun.ObtenerConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand("select cita.prox_cita, cita.hora_cita from cita inner join afiliados on cita.id_afiliado = afiliados.id_afiliado inner join doctores on cita.id_doctor = doctores.id_doctor where afiliados.dui like '" + dui + "' ", cn);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    dataGrid_recetaPaciente.DataSource = ds.Tables[0];
+                    cn.Close();
+                }
+
+                using (MySqlConnection cn = BdComun.ObtenerConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand(" select examenes.nombre_de_exam as 'Nombre de examen' , examenes.fecha_de_exam as 'Fecha de examen' , examenes.fecha_reciv_exam as 'Fecha de recepcion de examen', hospital.nombreh as Hospital from examenes inner join afiliados on examenes.id_afiliado = afiliados.id_afiliado inner join doctores on examenes.id_doctor = doctores.id_doctor inner join hospital on examenes.id_hospital = hospital.id_hospital where afiliados.dui like '" + dui + "' ", cn);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    dataGrid_paciente.DataSource = ds.Tables[0];
+                    cn.Close();
+                }
+
+
+
+
+               
             }
         }
 
@@ -102,9 +132,13 @@ namespace MDS
 
         private void citasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // llena los datos de los pacientes en el fomulario de citas 
             Citas_formulario citas = new Citas_formulario();
             citas.Show();
             citas.label11.Text = label1.Text;
+            citas.label5.Text = name2;
+            citas.label7.Text = dui;
+            citas.label6.Text = apellido2;
             
         }
 
@@ -134,6 +168,16 @@ namespace MDS
 
         private void menu_doc_Load(object sender, EventArgs e)
         {
+
+          
+
+           
+
+        }
+
+        private void dataGrid_recetaPaciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace MDS
         public Login()
         {
             InitializeComponent();
+            usuariotxt.Focus();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,7 +38,7 @@ namespace MDS
 
         private void Login_Load(object sender, EventArgs e)
         {
-            usuariotxt.Focus();
+           
         }
 
 
@@ -108,7 +109,11 @@ namespace MDS
             }
         }
 
-
+        private void passtxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                this.inicio2();
+        }
 
         public void inicio2()
         {
@@ -145,7 +150,9 @@ namespace MDS
                             //Condicional para ingresar al Menu Afiliador
                             if (Convert.ToInt32(prueba.Rows[0][0]) == 1)
                             {
-
+                                Menu_administrativo adm = new Menu_administrativo();
+                                adm.Show();
+                                this.Hide();
                             }
                             //Condicional para ingresar al Menu Doctor
                             else if(Convert.ToInt32(prueba2.Rows[0][0]) == 1)

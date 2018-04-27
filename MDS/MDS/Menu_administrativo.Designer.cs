@@ -62,6 +62,7 @@
             this.duitxt = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -234,9 +235,11 @@
             this.btnAsignar.TabIndex = 0;
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.comboBox2);
             this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(196, 33);
@@ -253,6 +256,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(210, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -285,6 +289,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Consulta General";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -296,6 +301,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Consulta Especializada";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -317,9 +323,8 @@
             this.lbledad.AutoSize = true;
             this.lbledad.Location = new System.Drawing.Point(72, 61);
             this.lbledad.Name = "lbledad";
-            this.lbledad.Size = new System.Drawing.Size(45, 16);
+            this.lbledad.Size = new System.Drawing.Size(0, 16);
             this.lbledad.TabIndex = 5;
-            this.lbledad.Text = "label7";
             // 
             // label6
             // 
@@ -335,18 +340,16 @@
             this.lblape.AutoSize = true;
             this.lblape.Location = new System.Drawing.Point(284, 28);
             this.lblape.Name = "lblape";
-            this.lblape.Size = new System.Drawing.Size(45, 16);
+            this.lblape.Size = new System.Drawing.Size(0, 16);
             this.lblape.TabIndex = 3;
-            this.lblape.Text = "label5";
             // 
             // lblnom
             // 
             this.lblnom.AutoSize = true;
             this.lblnom.Location = new System.Drawing.Point(72, 28);
             this.lblnom.Name = "lblnom";
-            this.lblnom.Size = new System.Drawing.Size(45, 16);
+            this.lblnom.Size = new System.Drawing.Size(0, 16);
             this.lblnom.TabIndex = 2;
-            this.lblnom.Text = "label4";
             // 
             // label3
             // 
@@ -403,6 +406,14 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(57, 37);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(210, 24);
+            this.comboBox2.TabIndex = 2;
+            // 
             // Menu_administrativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,7 +424,7 @@
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_administrativo";
-            this.Text = "Menu_administrativo";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Menu_administrativo_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -471,5 +482,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         public System.Windows.Forms.MaskedTextBox duitxt;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
