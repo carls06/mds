@@ -13,13 +13,12 @@ namespace MDS
 {
     public partial class Menu_administrativo : Form
     {
+        public List<int> id_doc = new List<int>();
         public Menu_administrativo()
         {
             InitializeComponent();
             groupBox2.Enabled = false;
-            radioButton1.Checked = true;
-         
-
+            radioButton1.Checked = true;       
         }
         int refe = 0;
 
@@ -100,8 +99,11 @@ namespace MDS
         {
 
         }
-        string nom, ape, eda;
 
+        string nom, ape, eda;
+        int id_afiliado;
+        public string id_doctor = "";
+        int indice;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -109,31 +111,58 @@ namespace MDS
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            DoctorDal lis = new DoctorDal();
-
-            lis.ListarDocGeneral(comboBox1);
-            comboBox2.Items.Clear();
+            DoctorDal lis = new DoctorDal();            
+            lis.ListarDocGeneral(comboBox1, id_doc);
+            cmbDoctor.Items.Clear();
+            //id_doc.Clear();
             comboBox1.Visible = true;
-            comboBox2.Visible = false;
+            comboBox1.SelectedIndex = 0;
+            cmbDoctor.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             DoctorDal lis2 = new DoctorDal();
-            lis2.ListarDocespecialidad(comboBox2);
+            lis2.ListarDocespecialidad(cmbDoctor);
             comboBox1.Items.Clear();
-            comboBox2.Visible = true;
+            cmbDoctor.Visible = true;
             comboBox1.Visible = false;
         }
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
- 
+            DateTime fecha = DateTime.Now;
+            string daate = fecha.Date.ToString("yyyy-MM-dd");
+            string hora = fecha.ToLocalTime().ToString("HH:mm");
+            indice = comboBox1.SelectedIndex;
+
+            //MessageBox.Show(id_doc[indice].ToString());
+            try
+            {
+                Citas inserta_cita = new Citas();
+                inserta_cita.consulta_general(daate, hora, id_afiliado, id_doc[indice]);
+                //limpiar();
+            }
+            catch
+            {
+
+            }
+          
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void cmbDoctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -144,21 +173,18 @@ namespace MDS
                 string dui = duitxt.Text;
                 try
                 {
-                    MessageBox.Show("conexion realizada" + dui);
-                    MySqlCommand comando = new MySqlCommand("SELECT nombre, apellido, edad FROM afiliados  WHERE dui = '" + dui + "'", cn);
+                    //MessageBox.Show("conexion realizada" + dui);
+                    MySqlCommand comando = new MySqlCommand("SELECT nombre, apellido, edad, id_afiliado FROM afiliados  WHERE dui = '" + dui + "'", cn);
                     //cn.Open();
                     comando.ExecuteNonQuery();
                     MySqlDataAdapter adapt = new MySqlDataAdapter(comando);
                     DataTable prueba = new DataTable();
-                    adapt.Fill(prueba);
-
-
-                    
-
+                    adapt.Fill(prueba);                   
 
                     nom = prueba.Rows[0][0].ToString();
                     ape = prueba.Rows[0][1].ToString();
                     eda = prueba.Rows[0][2].ToString();
+                    id_afiliado = (int)prueba.Rows[0][3];
 
 
                 lblnom.Text = nom;
@@ -167,21 +193,21 @@ namespace MDS
 
 
                     groupBox2.Enabled = true;
-
-
-
-
-
                 }
                 catch
                 {
-
-
                     MessageBox.Show("Error! Dui  invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
 
-            }
+            }         
+        }
+
+        public void limpiar()
+        {
+            lblnom.Text = "";
+            lblape.Text = "";
+            lbledad.Text = "";
+            duitxt.Text = "";
         }
     }
 }
