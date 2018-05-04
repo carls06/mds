@@ -13,9 +13,12 @@ namespace MDS
 {
     public partial class Menu_doc : Form
     {
-        string name, apellido, especialidad, id_doctor;
+        string name, apellido, especialidad, id_doctor,idafiliado;
         string name2, apellido2;
         string dui;
+
+        string medicina, descripcion,time;
+        
         Queue<string> Id_Afi = new Queue<string>();
         public Menu_doc()
         {
@@ -68,9 +71,10 @@ namespace MDS
         private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             duitxt.Text = "";
-            
-            dataGrid_paciente.Rows.Clear();
-            dataGrid_recetaPaciente.Rows.Clear();
+            dataGrid_paciente.DataSource = "";
+            dataGrid_recetaPaciente.DataSource = "";
+           // dataGrid_paciente.Rows.Clear();
+            //dataGrid_recetaPaciente.Rows.Clear();
             Id_Afi.Clear();
             Llenar_Cola();
             if (Id_Afi.Count == 0)
@@ -82,7 +86,7 @@ namespace MDS
                 //Llena la cola de los pacientes que el doctor tiene que atender
                 using (MySqlConnection cn = BdComun.ObtenerConexion())
                 {
-                    MySqlCommand cmd = new MySqlCommand("select nombre, apellido, dui from afiliados where id_afiliado = '" + Id_Afi.Peek() + "'", cn);
+                    MySqlCommand cmd = new MySqlCommand("select nombre, apellido, dui,id_afiliado from afiliados where id_afiliado = '" + Id_Afi.Peek() + "'", cn);
                     cmd.ExecuteNonQuery();
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable ds = new DataTable();
@@ -90,6 +94,7 @@ namespace MDS
                     name2 = ds.Rows[0][0].ToString();
                     apellido2 = ds.Rows[0][1].ToString();
                     dui = ds.Rows[0][2].ToString();
+                    idafiliado = ds.Rows[0][3].ToString();
                     cn.Close();
                 }
                 lblNombre.Text = name2;
@@ -107,6 +112,7 @@ namespace MDS
                     cn.Close();
                 }
 
+                // llena los examenes
                 using (MySqlConnection cn = BdComun.ObtenerConexion())
                 {
                     MySqlCommand cmd = new MySqlCommand(" select examenes.nombre_de_exam as 'Nombre de examen' , examenes.fecha_de_exam as 'Fecha de examen' , examenes.fecha_reciv_exam as 'Fecha de recepcion de examen', hospital.nombreh as Hospital from examenes inner join afiliados on examenes.id_afiliado = afiliados.id_afiliado inner join doctores on examenes.id_doctor = doctores.id_doctor inner join hospital on examenes.id_hospital = hospital.id_hospital where afiliados.dui like '" + dui + "' ", cn);
@@ -117,10 +123,21 @@ namespace MDS
                     cn.Close();
                 }
 
+                // llena los medicamentos de paciente
 
 
+                //using (MySqlConnection cn = BdComun.ObtenerConexion())
+                //{
+                //    MySqlCommand cmd = new MySqlCommand("select nombre_de_medicamento, descripcion, fecha_de_receta from receta inner join afiliados on receta.id_afiliado=afiliados.id_afiliado  where afiliados.dui like '" + dui + "' ", cn);
+                //    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                //    DataSet ds = new DataSet();
+                //    da.Fill(ds);
+                //    dataGridView1.DataSource = ds.Tables[0];
+                    
+                //    cn.Close();
+                //}
 
-               
+             
             }
         }
 
@@ -147,7 +164,9 @@ namespace MDS
             Recetas_formulario recetas = new Recetas_formulario();
             recetas.Show();
             recetas.label10.Text = label1.Text;
-            
+            recetas.label12.Text = idafiliado;
+            recetas.label13.Text = id_doctor;
+
         }
 
         private void examenesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -164,6 +183,8 @@ namespace MDS
             referencias.Show();
             referencias.label10.Text = label1.Text;
             
+
+            
         }
 
         private void menu_doc_Load(object sender, EventArgs e)
@@ -178,6 +199,16 @@ namespace MDS
         private void dataGrid_recetaPaciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTerminar_Click(object sender, EventArgs e)
+        {
+         
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

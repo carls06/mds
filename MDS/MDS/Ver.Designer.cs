@@ -71,6 +71,7 @@
             this.duitxt.Name = "duitxt";
             this.duitxt.Size = new System.Drawing.Size(148, 25);
             this.duitxt.TabIndex = 32;
+            this.duitxt.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.duitxt_MaskInputRejected);
             // 
             // button2
             // 

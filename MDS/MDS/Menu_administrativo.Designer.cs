@@ -350,6 +350,7 @@
             this.groupBox6.TabIndex = 33;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Programación de cita medica";
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // button2
             // 

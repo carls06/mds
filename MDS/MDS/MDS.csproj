@@ -65,6 +65,7 @@
     <Compile Include="Doctor_formulario.Designer.cs">
       <DependentUpon>Doctor_formulario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Receta.cs" />
     <Compile Include="Ver.cs">
       <SubType>Form</SubType>
     </Compile>

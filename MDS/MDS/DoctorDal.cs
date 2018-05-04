@@ -88,5 +88,29 @@ namespace MDS
             return cantidad;
         }
 
+
+        public static int Agregar_recetas(Receta afili)
+        {
+            int retorno = 0;
+            try
+            {
+
+
+                // insert into receta (id_afiliado, id_doctor, nombre_de_medicamento, descripcion, fecha_de_receta)values (505,5,'salbutamol', 'tomar cada 8 horas', sysdate()) (505,5,'salbutamol', 'tomar cada 8 horas', sysdate())
+
+                MySqlCommand comando = new MySqlCommand(string.Format("insert into receta (id_afiliado, id_doctor, nombre_de_medicamento, descripcion, fecha_de_receta)values ('{0}','{1}','{2}','{3}','{4}')",
+                  afili.idaf,afili.iddoc,  afili.medicamento, afili.desc, afili.fecha), BdComun.ObtenerConexion());
+                retorno = comando.ExecuteNonQuery();
+
+                return retorno;
+            }
+            catch
+            {
+
+                return retorno;
+            }
+
+        }
+
     }
 }

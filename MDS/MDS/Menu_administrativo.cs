@@ -165,6 +165,11 @@ namespace MDS
             
         }
 
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCheck_Click(object sender, EventArgs e)
         {
             using (MySqlConnection cn = BdComun.ObtenerConexion())

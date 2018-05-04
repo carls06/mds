@@ -137,5 +137,10 @@ namespace MDS
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void duitxt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
