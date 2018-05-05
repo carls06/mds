@@ -170,6 +170,11 @@ namespace MDS
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCheck_Click(object sender, EventArgs e)
         {
             using (MySqlConnection cn = BdComun.ObtenerConexion())

@@ -161,7 +161,7 @@ namespace MDS
 
         private void recetasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Recetas_formulario recetas = new Recetas_formulario();
+            Recetas recetas = new Recetas();
             recetas.Show();
             recetas.label10.Text = label1.Text;
             recetas.label12.Text = idafiliado;
