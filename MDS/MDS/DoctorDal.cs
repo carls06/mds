@@ -56,18 +56,41 @@ namespace MDS
             }
         }
 
-        public void ListarDocespecialidad(ComboBox cb)
-        {      
+        public void ListarDocespecialidad(ComboBox cb, List<int> id_doc)
+        {
             using (MySqlConnection conexion = BdComun.ObtenerConexion())
             {
-                MySqlCommand comando2 = new MySqlCommand(string.Format("select nombre, apellido from doctores where especialidad like '%gia'"), conexion);
+                MySqlCommand comando2 = new MySqlCommand(string.Format("select nombre, apellido, id_doctor, especialidad from doctores where especialidad like '%gia'"), conexion);
                 MySqlDataReader reader = comando2.ExecuteReader();
 
                 while (reader.Read())
-                {                   
-                    cb.Items.Add(reader.GetString(0)+ " "+ reader.GetString(1));
-                }                
-                conexion.Close();                
+                {
+                    if (num_consulta(reader.GetString(2)) <= 10)
+                    {
+                        cb.Items.Add(reader.GetString(0) + " " + reader.GetString(1) + " -> " + reader.GetString(3));
+                        id_doc.Add((int)reader.GetValue(2));
+                    }
+                }
+                conexion.Close();
+            }
+        }
+
+        public void ListaDoc_por_cita(ComboBox cb, List<int> id_doc)
+        {
+            using (MySqlConnection conexion = BdComun.ObtenerConexion())
+            {
+                MySqlCommand comando2 = new MySqlCommand(string.Format("select nombre, apellido, id_doctor, especialidad from doctores where especialidad like '%.'"), conexion);
+                MySqlDataReader reader = comando2.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (num_consulta(reader.GetString(2)) <= 10)
+                    {
+                        cb.Items.Add(reader.GetString(0) + " " + reader.GetString(1) + " -> " + reader.GetString(3));
+                        id_doc.Add((int)reader.GetValue(2));
+                    }
+                }
+                conexion.Close();
             }
         }
 
@@ -88,14 +111,28 @@ namespace MDS
             return cantidad;
         }
 
+        public string Nombre_doc(int id_doc)
+        {
+            string nombre = "";
+            string c = "select nombre, apellido, id_doctor from doctores where id_doctor ='" + id_doc + "'";
+            using (MySqlConnection conexion = BdComun.ObtenerConexion())
+            {
+                MySqlCommand comando2 = new MySqlCommand(string.Format(c), conexion);
+                MySqlDataReader dato = comando2.ExecuteReader();
+                while (dato.Read())
+                {
+                    nombre = dato.GetString(0) + " " + dato.GetString(1);
+                }
+                conexion.Close();
+                return nombre;
+            }
+        }
 
         public static int Agregar_recetas(Receta afili)
         {
             int retorno = 0;
             try
-            {
-
-
+            { 
                 // insert into receta (id_afiliado, id_doctor, nombre_de_medicamento, descripcion, fecha_de_receta)values (505,5,'salbutamol', 'tomar cada 8 horas', sysdate()) (505,5,'salbutamol', 'tomar cada 8 horas', sysdate())
 
                 MySqlCommand comando = new MySqlCommand(string.Format("insert into receta (id_afiliado, id_doctor, nombre_de_medicamento, descripcion, fecha_de_receta)values ('{0}','{1}','{2}','{3}','{4}')",
