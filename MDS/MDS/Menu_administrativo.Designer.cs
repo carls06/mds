@@ -52,17 +52,17 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCancelar_TP3 = new System.Windows.Forms.Button();
+            this.btnReservarTP3_Click = new System.Windows.Forms.Button();
+            this.dtpHora_tp3 = new System.Windows.Forms.DateTimePicker();
+            this.cmbDoctor_Cita = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Doctor = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Dia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Citas_Calendario = new System.Windows.Forms.MonthCalendar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbledad = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,8 +81,7 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,7 +169,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(662, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(47, 450);
+            this.menuStrip2.Size = new System.Drawing.Size(47, 569);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -184,13 +183,14 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 197);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(685, 241);
+            this.tabControl1.Size = new System.Drawing.Size(685, 360);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
@@ -198,7 +198,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(677, 212);
+            this.tabPage1.Size = new System.Drawing.Size(677, 331);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Solicitud de Consulta";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(6, 34);
+            this.groupBox2.Location = new System.Drawing.Point(6, 84);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(665, 159);
             this.groupBox2.TabIndex = 4;
@@ -219,9 +219,9 @@
             // 
             this.groupBox5.Controls.Add(this.btnCancelar);
             this.groupBox5.Controls.Add(this.btnAsignar);
-            this.groupBox5.Location = new System.Drawing.Point(481, 36);
+            this.groupBox5.Location = new System.Drawing.Point(503, 36);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(178, 117);
+            this.groupBox5.Size = new System.Drawing.Size(156, 117);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Paso 3: Confirmar";
@@ -253,7 +253,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(196, 33);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(279, 120);
+            this.groupBox4.Size = new System.Drawing.Size(301, 120);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Paso 2: Asignar Doctor";
@@ -263,7 +263,7 @@
             this.cmbDoctor.FormattingEnabled = true;
             this.cmbDoctor.Location = new System.Drawing.Point(57, 37);
             this.cmbDoctor.Name = "cmbDoctor";
-            this.cmbDoctor.Size = new System.Drawing.Size(210, 24);
+            this.cmbDoctor.Size = new System.Drawing.Size(238, 24);
             this.cmbDoctor.TabIndex = 2;
             this.cmbDoctor.SelectedIndexChanged += new System.EventHandler(this.cmbDoctor_SelectedIndexChanged);
             // 
@@ -321,113 +321,107 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // tabPage2
+            // tabPage3
             // 
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(677, 212);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Reservar Consulta";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage3.Controls.Add(this.btnCancelar_TP3);
+            this.tabPage3.Controls.Add(this.btnReservarTP3_Click);
+            this.tabPage3.Controls.Add(this.dtpHora_tp3);
+            this.tabPage3.Controls.Add(this.cmbDoctor_Cita);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.Doctor);
+            this.tabPage3.Controls.Add(this.listView1);
+            this.tabPage3.Controls.Add(this.Citas_Calendario);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(677, 331);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Reservar Consulta";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // btnCancelar_TP3
             // 
-            this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Controls.Add(this.button1);
-            this.groupBox6.Controls.Add(this.dateTimePicker3);
-            this.groupBox6.Controls.Add(this.maskedTextBox1);
-            this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.dateTimePicker2);
-            this.groupBox6.Controls.Add(this.dateTimePicker1);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(25, 18);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(594, 168);
-            this.groupBox6.TabIndex = 33;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Programación de cita medica";
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
+            this.btnCancelar_TP3.Location = new System.Drawing.Point(207, 265);
+            this.btnCancelar_TP3.Name = "btnCancelar_TP3";
+            this.btnCancelar_TP3.Size = new System.Drawing.Size(90, 34);
+            this.btnCancelar_TP3.TabIndex = 7;
+            this.btnCancelar_TP3.Text = "Cancelar";
+            this.btnCancelar_TP3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnReservarTP3_Click
             // 
-            this.button2.Location = new System.Drawing.Point(478, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 46);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReservarTP3_Click.Location = new System.Drawing.Point(207, 225);
+            this.btnReservarTP3_Click.Name = "btnReservarTP3_Click";
+            this.btnReservarTP3_Click.Size = new System.Drawing.Size(90, 34);
+            this.btnReservarTP3_Click.TabIndex = 6;
+            this.btnReservarTP3_Click.Text = "Reservar";
+            this.btnReservarTP3_Click.UseVisualStyleBackColor = true;
+            this.btnReservarTP3_Click.Click += new System.EventHandler(this.btnReservarTP3_Click_Click);
             // 
-            // button1
+            // dtpHora_tp3
             // 
-            this.button1.Location = new System.Drawing.Point(478, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 46);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Resevar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dtpHora_tp3.CustomFormat = "HH:mm";
+            this.dtpHora_tp3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHora_tp3.Location = new System.Drawing.Point(60, 229);
+            this.dtpHora_tp3.Name = "dtpHora_tp3";
+            this.dtpHora_tp3.ShowUpDown = true;
+            this.dtpHora_tp3.Size = new System.Drawing.Size(54, 22);
+            this.dtpHora_tp3.TabIndex = 5;
             // 
-            // dateTimePicker3
+            // cmbDoctor_Cita
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(278, 101);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.ShowUpDown = true;
-            this.dateTimePicker3.Size = new System.Drawing.Size(114, 22);
-            this.dateTimePicker3.TabIndex = 29;
+            this.cmbDoctor_Cita.FormattingEnabled = true;
+            this.cmbDoctor_Cita.Location = new System.Drawing.Point(60, 190);
+            this.cmbDoctor_Cita.Name = "cmbDoctor_Cita";
+            this.cmbDoctor_Cita.Size = new System.Drawing.Size(237, 24);
+            this.cmbDoctor_Cita.TabIndex = 4;
             // 
-            // maskedTextBox1
+            // label7
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(160, 100);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 28;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 229);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 16);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Hora";
             // 
-            // label4
+            // Doctor
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Fecha de emisión:";
+            this.Doctor.AutoSize = true;
+            this.Doctor.Location = new System.Drawing.Point(9, 193);
+            this.Doctor.Name = "Doctor";
+            this.Doctor.Size = new System.Drawing.Size(48, 16);
+            this.Doctor.TabIndex = 2;
+            this.Doctor.Text = "Doctor";
             // 
-            // label9
+            // listView1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 16);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Fecha de proxima cita:";
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.Dia});
+            this.listView1.Location = new System.Drawing.Point(341, 12);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(302, 291);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label10
+            // columnHeader1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(56, 106);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 16);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Hora de la cita:";
+            this.columnHeader1.Text = "Hora";
+            this.columnHeader1.Width = 105;
             // 
-            // dateTimePicker2
+            // Dia
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(158, 71);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(275, 22);
-            this.dateTimePicker2.TabIndex = 25;
+            this.Dia.Width = 201;
             // 
-            // dateTimePicker1
+            // Citas_Calendario
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 40);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(275, 22);
-            this.dateTimePicker1.TabIndex = 24;
+            this.Citas_Calendario.Location = new System.Drawing.Point(12, 12);
+            this.Citas_Calendario.MaxSelectionCount = 1;
+            this.Citas_Calendario.Name = "Citas_Calendario";
+            this.Citas_Calendario.TabIndex = 0;
+            this.Citas_Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Citas_Calendario_DateChanged);
             // 
             // groupBox1
             // 
@@ -501,7 +495,7 @@
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(385, 54);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.Size = new System.Drawing.Size(75, 24);
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "Verificar";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -530,7 +524,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 450);
+            this.ClientSize = new System.Drawing.Size(709, 569);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -554,9 +548,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -579,7 +572,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCheck;
@@ -601,15 +593,16 @@
         private System.Windows.Forms.RadioButton radioButton2;
         public System.Windows.Forms.MaskedTextBox duitxt;
         private System.Windows.Forms.ComboBox cmbDoctor;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.MonthCalendar Citas_Calendario;
+        private System.Windows.Forms.DateTimePicker dtpHora_tp3;
+        private System.Windows.Forms.ComboBox cmbDoctor_Cita;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Doctor;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader Dia;
+        private System.Windows.Forms.Button btnCancelar_TP3;
+        private System.Windows.Forms.Button btnReservarTP3_Click;
     }
 }

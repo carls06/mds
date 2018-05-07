@@ -141,7 +141,7 @@ namespace MDS
                             DataTable prueba2 = new DataTable();
                             adapt2.Fill(prueba2);
                             //Comando Ingreso (menu administrativo)
-                            MySqlCommand comando3 = new MySqlCommand("select exists(select * from ingreso where nombre = '" + idsesion + "' and pass = '" + pass + "')", cn);
+                            MySqlCommand comando3 = new MySqlCommand("select exists(select * from usuario where usuario = '" + idsesion + "' and contraseña = '" + pass + "')", cn);
                             comando.ExecuteNonQuery();
                             MySqlDataAdapter adapt3 = new MySqlDataAdapter(comando3);
                             DataTable prueba3 = new DataTable();
