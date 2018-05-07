@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace MDS
 {
-    public partial class Recetas_formulario : Form
+    public partial class Recetas : Form
     {
         Menu_doc doc = new Menu_doc();
-        public Recetas_formulario()
+        public Recetas()
         {
             InitializeComponent();
            

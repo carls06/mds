@@ -55,7 +55,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -65,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(34, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
             // 
@@ -73,14 +73,12 @@
             // 
             this.groupBox1.Controls.Add(this.passtxt);
             this.groupBox1.Controls.Add(this.usuariotxt);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Poor Richard", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 193);
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 179);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(352, 217);
+            this.groupBox1.Size = new System.Drawing.Size(352, 200);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "inicio";
@@ -90,7 +88,7 @@
             // 
             this.passtxt.Location = new System.Drawing.Point(143, 126);
             this.passtxt.Name = "passtxt";
-            this.passtxt.Size = new System.Drawing.Size(171, 26);
+            this.passtxt.Size = new System.Drawing.Size(171, 27);
             this.passtxt.TabIndex = 6;
             this.passtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passtxt_KeyPress);
             // 
@@ -98,24 +96,26 @@
             // 
             this.usuariotxt.Location = new System.Drawing.Point(143, 59);
             this.usuariotxt.Name = "usuariotxt";
-            this.usuariotxt.Size = new System.Drawing.Size(171, 26);
+            this.usuariotxt.Size = new System.Drawing.Size(171, 27);
             this.usuariotxt.TabIndex = 5;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(175, 172);
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(243, 385);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 30);
+            this.button2.Size = new System.Drawing.Size(83, 43);
             this.button2.TabIndex = 4;
-            this.button2.Text = "entrar";
+            this.button2.Text = "Entrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(47, 172);
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(50, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 30);
+            this.button1.Size = new System.Drawing.Size(76, 47);
             this.button1.TabIndex = 3;
             this.button1.Text = "salir";
             this.button1.UseVisualStyleBackColor = true;
@@ -127,8 +127,11 @@
             this.ClientSize = new System.Drawing.Size(380, 440);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Login MDS";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
