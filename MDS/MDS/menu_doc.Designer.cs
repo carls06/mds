@@ -81,13 +81,13 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
             this.nuevoPacienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(849, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(842, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -135,7 +135,7 @@
             // nuevoPacienteToolStripMenuItem
             // 
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
-            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.nuevoPacienteToolStripMenuItem.Text = "Siguiente Paciente";
             this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
@@ -163,27 +163,27 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(118, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 16);
+            this.label3.Size = new System.Drawing.Size(30, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "DUI";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(25, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 18);
+            this.label2.Size = new System.Drawing.Size(55, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Doctor:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(89, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 18);
+            this.label1.Size = new System.Drawing.Size(45, 18);
             this.label1.TabIndex = 10;
             this.label1.Text = "label1";
             // 
@@ -260,7 +260,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.lblNombre);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(15, 74);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(744, 84);
@@ -273,7 +273,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(676, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 16);
+            this.label9.Size = new System.Drawing.Size(44, 16);
             this.label9.TabIndex = 5;
             this.label9.Text = "label9";
             // 
@@ -282,7 +282,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(626, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.Size = new System.Drawing.Size(40, 16);
             this.label8.TabIndex = 4;
             this.label8.Text = "Edad:";
             // 
@@ -291,7 +291,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Location = new System.Drawing.Point(385, 31);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(45, 16);
+            this.lblApellido.Size = new System.Drawing.Size(44, 16);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "label7";
             // 
@@ -300,7 +300,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(318, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
+            this.label6.Size = new System.Drawing.Size(58, 16);
             this.label6.TabIndex = 2;
             this.label6.Text = "Apellido:";
             // 
@@ -309,7 +309,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(76, 31);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(45, 16);
+            this.lblNombre.Size = new System.Drawing.Size(44, 16);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "label5";
             // 
@@ -318,14 +318,14 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(10, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre:";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tabControl1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(15, 164);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(846, 413);
@@ -335,7 +335,7 @@
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerminar.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTerminar.Location = new System.Drawing.Point(765, 82);
             this.btnTerminar.Name = "btnTerminar";
             this.btnTerminar.Size = new System.Drawing.Size(96, 76);
@@ -349,17 +349,18 @@
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(849, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(842, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(47, 589);
+            this.menuStrip2.Size = new System.Drawing.Size(54, 589);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(34, 19);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -377,6 +378,7 @@
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu_doc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "menu_doc";
             this.Load += new System.EventHandler(this.menu_doc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_paciente)).EndInit();

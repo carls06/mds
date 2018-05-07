@@ -92,6 +92,25 @@ namespace MDS
             }
         }
 
+        public void ListaDoc_por_cita(ComboBox cb, List<int> id_doc)
+        {
+            using (MySqlConnection conexion = BdComun.ObtenerConexion())
+            {
+                MySqlCommand comando2 = new MySqlCommand(string.Format("select nombre, apellido, id_doctor, especialidad from doctores where especialidad like '%.'"), conexion);
+                MySqlDataReader reader = comando2.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (num_consulta(reader.GetString(2)) <= 10)
+                    {
+                        cb.Items.Add(reader.GetString(0) + " " + reader.GetString(1) + " -> " + reader.GetString(3));
+                        id_doc.Add((int)reader.GetValue(2));
+                    }
+                }
+                conexion.Close();
+            }
+        }
+
         public int num_consulta(string id_doc)
         {
             int cantidad = 0;

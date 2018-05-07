@@ -14,6 +14,7 @@ namespace MDS
 {
     public partial class Menu_administrativo : Form
     {
+        string[] horas = new string[] { "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00" };
         public List<int> id_doc = new List<int>();
         public List<int> id_doc_esp = new List<int>();
         public List<int> id_doc_cita = new List<int>();
@@ -21,7 +22,7 @@ namespace MDS
         {
             InitializeComponent();
             groupBox2.Enabled = false;
-            radioButton1.Checked = true;       
+            radioButton1.Checked = true;
         }
         int refe = 0;
 
@@ -49,10 +50,10 @@ namespace MDS
             this.Hide();
         }
 
-            
+
         private void Menu_administrativo_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void afiliadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,10 +172,15 @@ namespace MDS
 
         private void cmbDoctor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -200,12 +206,9 @@ namespace MDS
                     eda = prueba.Rows[0][2].ToString();
                     id_afiliado = (int)prueba.Rows[0][3];
 
-
                     lblnom.Text = nom;
                     lblape.Text = ape;
                     lbledad.Text = eda;
-
-
                     groupBox2.Enabled = true;
                     tabControl1.Enabled = true;
                 }
